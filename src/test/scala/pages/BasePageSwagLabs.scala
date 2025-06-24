@@ -4,16 +4,16 @@ import org.openqa.selenium.{By, JavascriptExecutor, WebDriver, WebElement}
 import support.DriverManager
 import utils.ConfigReader
 
-trait BasePage {
+trait BasePageSwagLabs {
   def driver: WebDriver = DriverManager.driver
 
   def js: JavascriptExecutor = driver.asInstanceOf[JavascriptExecutor]
 
+def launchBrowser(): Unit ={
+  val URL = ConfigReader.get("base.url")
+  driver.get(URL)
+}
 
-  def browserLaunch(): Unit = {
-    val testUrl = ConfigReader.get("base.url")
-    driver.get(testUrl)
-  }
 
   // Locator Identification
   def findById(id: String): WebElement = driver.findElement(By.id(id))
@@ -48,8 +48,5 @@ trait BasePage {
     driver.findElement(selector).click()
   }
 
-
-  //  def getText(selector: By): String =
-  //    driver.findElement(selector).getText
 
 }

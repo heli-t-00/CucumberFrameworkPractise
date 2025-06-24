@@ -2,7 +2,7 @@ package utils
 
 import org.openqa.selenium.io.FileHandler
 import org.openqa.selenium.{OutputType, TakesScreenshot, WebDriver}
-import pages.LoginPage.driver
+import pages.loginPageSwagLabs.driver
 
 import java.io.File
 import java.text.SimpleDateFormat
