@@ -13,7 +13,7 @@ object ScreenCapture {
   val srcTimestamp: File = driver.asInstanceOf[TakesScreenshot].getScreenshotAs(OutputType.FILE)
 
   // CREATED a reusable METHOD 'capture' to take screenshot, this can be called in stepdef, After hook or Base page class
-  def capture(driver: WebDriver, filenamePrefix: String = "PractiseFormFeature_"): Unit = {
+  def capture(driver: WebDriver, filenamePrefix: String = "SwagLabs_"): Unit = {
 
     try {
       //take screenshot and store in file
