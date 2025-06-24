@@ -9,4 +9,5 @@ object loginLocatorsSwagLabs {
   val password: By = By.id("password")
   val login:   By = By.id("login-button")
 
+  val errorMessage: By = By.xpath("//*[@id=\"login_button_container\"]/div/form/div[3]/h3")
 }

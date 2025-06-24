@@ -48,5 +48,8 @@ def launchBrowser(): Unit ={
     driver.findElement(selector).click()
   }
 
+  def errorMess(selector: By): Unit ={
+    driver.findElement(selector).click()
+  }
 
 }
