@@ -6,7 +6,7 @@ import utils.ScreenCapture.capture
 class Hooks extends ScalaDsl with EN {
 
   val options = new ChromeOptions()
-//  options.addArguments("--headless=new") // COMMENT OUT - to see the test run
+  options.addArguments("--headless=new") // COMMENT OUT - to see the test run
 
   Before {
     println("Launching browser before scenario...")
@@ -19,6 +19,6 @@ class Hooks extends ScalaDsl with EN {
       capture(DriverManager.driver, filenamePrefix = "FailedScenario")
     }
     println("Closing browser after scenario...")
-//    DriverManager.driver.quit()
+    DriverManager.driver.quit()
   }
 }
